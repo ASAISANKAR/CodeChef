@@ -17,4 +17,30 @@ int main(void) {
 	return 0;
 }
 
+Q) Sunday Brunch
+IN C LANGUAGE
+
+#include <stdio.h>
+
+void solve()
+{
+    int x;
+	scanf("%d",&x);
+	while(x--)
+	{
+	    int a,b;
+	    scanf("%d %d",&a,&b);
+	    int c=a/b;
+	    if(c>=20)
+	    printf("%d\n",20);
+	    else
+	    printf("%d\n",c);
+	}
+}
+
+int main(void) {
+	solve();
+	return 0;
+}
+
 
