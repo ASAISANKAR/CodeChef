@@ -44,3 +44,65 @@ int main(void) {
 }
 
 
+Q) Dice Number
+IN C LANGUAGE
+
+#include <stdio.h>
+
+void solve()
+{
+    int x;
+    scanf("%d",&x);
+    while(x--)
+    {
+        int a[3],b[3];
+        scanf("%d %d %d %d %d %d",&a[0],&a[1],&a[2],&b[0],&b[1],&b[2]);
+        for (int step = 0; step < 3; ++step) {
+          for (int i = 0; i < 3 - step - 1; ++i) {
+            if (a[i] < a[i + 1]) {
+        int temp = a[i];
+        a[i] = a[i + 1];
+        a[i + 1] = temp;
+      }
+    }
+  }
+  
+  for (int step = 0; step < 3; ++step) {
+          for (int i = 0; i < 3 - step - 1; ++i) {
+            if (b[i] < b[i + 1]) {
+        int temp = b[i];
+        b[i] = b[i + 1];
+        b[i + 1] = temp;
+      }
+    }
+  }
+  
+int f=0;
+for(int i=0;i<3;i++)
+{
+    f=f*10+a[i];
+}
+
+int s=0;
+for(int i=0;i<3;i++)
+{
+    s=s*10+b[i];
+}
+
+if(f>s)
+printf("Alice\n");
+else if(f<s)
+printf("Bob\n");
+else
+printf("Tie\n");
+  
+        
+    }
+}
+
+int main(void) {
+	solve();
+	return 0;
+}
+
+
